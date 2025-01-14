@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[%showframe,
+            margin=2cm]{geometry}
+\usepackage{libertine}
+\usepackage{microtype}
+\usepackage[scaled=0.85]{beramono}%% mono
+
+\usepackage[svgnames]{xcolor}
+
+\PassOptionsToPackage{breaklinks}{hyperref}
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, citecolor=DarkBlue, linkcolor=DarkBlue, urlcolor=DarkBlue}
+
+\usepackage{fontawesome}
+\usepackage[inline]{enumitem} % inline enable inline lists
+
+\usepackage{xhfill} % for horizontal lines
+
+%https://tex.stackexchange.com/questions/376017/item-label-in-description-environment-too-long-for-margin
+\SetLabelAlign{parright}{\strut\smash{\parbox[t]\labelwidth{\raggedleft#1}}}
+
+\setlist[description]{style=multiline,
+                leftmargin=2cm,
+                labelsep=.3cm,
+                labelwidth=1.5cm,
+                font=\small\normalfont\itshape,
+                itemsep=.1cm,
+                align=parright}
+
+\setlength{\parindent}{0cm}
+
+\usepackage{titlesec}
+\titleformat{\section}[hang]
+    {\Large\normalfont\scshape}% format
+    {}% label
+    {0pt}% sep
+    {}% before code
+    [{\titlerule[0.6pt]}]% after code
+
+\titleformat{\subsection}[hang]
+    {\large\itshape}% format
+    {}% label
+    {0pt}% sep
+    {}% before code
+    []% after code
+
+\titleformat{\subsubsection}[hang]
+    {\small\normalfont\bfseries}% format
+    {}% label
+    {0pt}% sep
+    {}% before code
+    []% after code
+
+\begin{document}
+
+{\Large 
+    \textbf{Florian Boudin} \quad Curriculum Vit\ae{}
+}
+\hfill
+{\small
+    Last update: \today
+}
+
+\vspace*{1em}
+
+Nantes Université \hfill \href{https://boudinfl.github.io/}{boudinfl.github.io/} \newline
+2 rue de la Houssinière \hfill florian.boudin@univ-nantes.fr \newline
+44322 Nantes, France \hfill  +33 2 51 12 59 98
+
+\section*{Employment History}
+
+\begin{description}
+
+    \item[09/2011 -- present]  \textbf{Associate Professor} - \emph{Maître de Conférences} \\
+                                Nantes Université, France
+
+    \item[09/2010 -- 08/2011] \textbf{Assistant Professor} - \emph{Attaché Temporaire d'Enseignement et de Recherche} \\
+                               Université d'Avignon et des Pays de Vaucluse, France
+
+    \item[02/2009 -- 08/2010] \textbf{Postdoctoral Fellow} \\
+                               Université de Montréal, Canada
+
+    \item[09/2006 -- 01/2009] \textbf{Research Assistant} \\
+                              Université d'Avignon et des Pays de Vaucluse, France
+
+\end{description}
+
+\section*{Education}
+
+\begin{description}
+
+    \item[06/2023] \textbf{Habilitation à Diriger des Recherches} \\
+                    Nantes Université, France
+                    %\textit{Analysing and indexing scientific texts}
+
+    \item[09/2006 -- 12/2008] \textbf{Ph.D. in Computer Science} \\
+                                Université d'Avignon et des Pays de Vaucluse, France \\
+                                Advisors: 
+                                \href{http://lia.univ-avignon.fr/chercheurs/torres/}{Juan-Manuel Torres-Moreno},
+                                \href{http://lia.univ-avignon.fr/user/48}{Marc El-Bèze}
+                                %\textit{Exploring Statistical Approaches to Automatic Text Summarization}
+                                
+    \item[2006] \textbf{M.Sc. in Computer Science} \\
+                Université d'Avignon et des Pays de Vaucluse, France
+
+    \item[2004] \textbf{B.Sc. in Mathematics and Computer Science} \\
+                Université d'Avignon et des Pays de Vaucluse, France \\
+                University of Birmingham, UK (ERASMUS Programme)
+    
+\end{description}
+
+\section*{Selected Awards, Grants and Fellowships}
+\input{sections/awards}
+
+\section{Research Interests}
+\input{sections/research}
+
+\section{Publications}
+\input{sections/publications}
+
+\section*{Mentoring and Student Supervision}
+\input{sections/students}
+
+\section*{Service}
+\input{sections/service}
+
+\end{document}
